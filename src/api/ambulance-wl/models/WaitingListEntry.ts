@@ -12,16 +12,18 @@
  * Do not edit the class manually.
  */
 
+// @ts-ignore
 import { exists, mapValues } from '../runtime';
 import type { Condition } from './Condition';
 import {
     ConditionFromJSON,
+// @ts-ignore
     ConditionFromJSONTyped,
     ConditionToJSON,
 } from './Condition';
 
 /**
- * 
+ *
  * @export
  * @interface WaitingListEntry
  */
@@ -63,7 +65,7 @@ export interface WaitingListEntry {
      */
     estimatedDurationMinutes: number;
     /**
-     * 
+     *
      * @type {Condition}
      * @memberof WaitingListEntry
      */
@@ -87,12 +89,13 @@ export function WaitingListEntryFromJSON(json: any): WaitingListEntry {
     return WaitingListEntryFromJSONTyped(json, false);
 }
 
+// @ts-ignore
 export function WaitingListEntryFromJSONTyped(json: any, ignoreDiscriminator: boolean): WaitingListEntry {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
-        
+
         'id': json['id'],
         'name': !exists(json, 'name') ? undefined : json['name'],
         'patientId': json['patientId'],
@@ -111,7 +114,7 @@ export function WaitingListEntryToJSON(value?: WaitingListEntry | null): any {
         return null;
     }
     return {
-        
+
         'id': value.id,
         'name': value.name,
         'patientId': value.patientId,

@@ -21,14 +21,14 @@ export class WacAmbulanceWlList {
       });
 
       const waitingListApi = new AmbulanceWaitingListApi(configuration);
-      const response = await waitingListApi.getWaitingListEntriesRaw({ambulanceId: this.ambulanceId})
+      const response = await waitingListApi.getWaitingListEntriesRaw({ ambulanceId: this.ambulanceId });
       if (response.raw.status < 299) {
         return await response.value();
       } else {
-        this.errorMessage = `Cannot retrieve list of waiting patients: ${response.raw.statusText}`
+        this.errorMessage = `Cannot retrieve list of waiting patients: ${response.raw.statusText}`;
       }
     } catch (err: any) {
-      this.errorMessage = `Cannot retrieve list of waiting patients: ${err.message || "unknown"}`
+      this.errorMessage = `Cannot retrieve list of waiting patients: ${err.message || 'unknown'}`;
     }
     return [];
   }
@@ -45,14 +45,18 @@ export class WacAmbulanceWlList {
           :
           <md-list>
             {this.waitingPatients.map(patient =>
-              <md-list-item onClick={ () => this.entryClicked.emit(patient.id)} >
+              <md-list-item onClick={() => this.entryClicked.emit(patient.id)}>
                 <div slot="headline">{patient.name}</div>
-                <div slot="supporting-text">{"Predpokladaný vstup: " + patient.estimatedStart?.toLocaleString()}</div>
+                <div slot="supporting-text">{'Predpokladaný vstup: ' + patient.estimatedStart?.toLocaleString()}</div>
                 <md-icon slot="start">person</md-icon>
-              </md-list-item>
+              </md-list-item>,
             )}
           </md-list>
         }
+        <md-filled-icon-button className="add-button"
+                               onclick={() => this.entryClicked.emit('@new')}>
+          <md-icon>add</md-icon>
+        </md-filled-icon-button>
       </Host>
     );
   }

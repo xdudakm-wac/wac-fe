@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+// @ts-ignore
 import { exists, mapValues } from '../runtime';
 /**
  * Describes disease, symptoms, or other reasons of patient   visit
@@ -20,13 +21,13 @@ import { exists, mapValues } from '../runtime';
  */
 export interface Condition {
     /**
-     * 
+     *
      * @type {string}
      * @memberof Condition
      */
     value: string;
     /**
-     * 
+     *
      * @type {string}
      * @memberof Condition
      */
@@ -38,7 +39,7 @@ export interface Condition {
      */
     reference?: string;
     /**
-     * 
+     *
      * @type {number}
      * @memberof Condition
      */
@@ -59,12 +60,13 @@ export function ConditionFromJSON(json: any): Condition {
     return ConditionFromJSONTyped(json, false);
 }
 
+// @ts-ignore
 export function ConditionFromJSONTyped(json: any, ignoreDiscriminator: boolean): Condition {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
-        
+
         'value': json['value'],
         'code': !exists(json, 'code') ? undefined : json['code'],
         'reference': !exists(json, 'reference') ? undefined : json['reference'],
@@ -80,7 +82,7 @@ export function ConditionToJSON(value?: Condition | null): any {
         return null;
     }
     return {
-        
+
         'value': value.value,
         'code': value.code,
         'reference': value.reference,
