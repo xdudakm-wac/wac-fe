@@ -2,11 +2,11 @@ import { Component, Host, Prop, State, h, EventEmitter, Event } from '@stencil/c
 import { AmbulanceConditionsApi, AmbulanceWaitingListApi, Condition, Configuration, WaitingListEntry } from '../../api/ambulance-wl';
 
 @Component({
-  tag: 'wac-ambulance-wl-editor',
-  styleUrl: 'wac-ambulance-wl-editor.css',
+  tag: 'xdudakm-ambulance-wl-editor',
+  styleUrl: 'xdudakm-ambulance-wl-editor.css',
   shadow: true,
 })
-export class WacAmbulanceWlEditor {
+export class XdudakmAmbulanceWlEditor {
   @Prop() entryId: string;
   @Prop() ambulanceId: string;
   @Prop() apiBase: string;

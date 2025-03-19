@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'wac-project',
+  namespace: 'xdudakm-project',
   outputTargets: [
     {
       type: 'dist',

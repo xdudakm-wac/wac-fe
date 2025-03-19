@@ -1,9 +1,9 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { WacAmbulanceWlList } from '../wac-ambulance-wl-list';
+import { XdudakmAmbulanceWlList } from '../xdudakm-ambulance-wl-list';
 import { WaitingListEntry } from '../../../api/ambulance-wl/models';
 import fetchMock from 'jest-fetch-mock';
 
-describe('wac-ambulance-wl-list', () => {
+describe('xdudakm-ambulance-wl-list', () => {
   const sampleEntries: WaitingListEntry[] = [
     {
       id: 'entry-1',
@@ -34,10 +34,10 @@ describe('wac-ambulance-wl-list', () => {
     fetchMock.mockResponseOnce(JSON.stringify(sampleEntries));
     // Set up the page with your component
     const page = await newSpecPage({
-      components: [WacAmbulanceWlList],
-      html: `<wac-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></wac-ambulance-wl-list>`,
+      components: [XdudakmAmbulanceWlList],
+      html: `<xdudakm-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></xdudakm-ambulance-wl-list>`,
     });
-    const wlList = page.rootInstance as WacAmbulanceWlList;
+    const wlList = page.rootInstance as XdudakmAmbulanceWlList;
     const expectedPatients = wlList?.waitingPatients?.length;
 
     // Wait for the DOM to update
@@ -54,11 +54,11 @@ describe('wac-ambulance-wl-list', () => {
     fetchMock.mockRejectOnce(new Error('Network Error'));
 
     const page = await newSpecPage({
-      components: [WacAmbulanceWlList],
-        html: `<wac-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></wac-ambulance-wl-list>`,
+      components: [XdudakmAmbulanceWlList],
+        html: `<xdudakm-ambulance-wl-list ambulance-id="test-ambulance" api-base="http://test/api"></xdudakm-ambulance-wl-list>`,
     });
 
-    const wlList = page.rootInstance as WacAmbulanceWlList;
+    const wlList = page.rootInstance as XdudakmAmbulanceWlList;
     const expectedPatients = wlList?.waitingPatients?.length;
 
     // Wait for the DOM to update

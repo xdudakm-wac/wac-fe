@@ -6,106 +6,106 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface WacAmbulanceWlApp {
+    interface XdudakmAmbulanceWlApp {
         "ambulanceId": string;
         "apiBase": string;
         "basePath": string;
     }
-    interface WacAmbulanceWlEditor {
+    interface XdudakmAmbulanceWlEditor {
         "ambulanceId": string;
         "apiBase": string;
         "entryId": string;
     }
-    interface WacAmbulanceWlList {
+    interface XdudakmAmbulanceWlList {
         "ambulanceId": string;
         "apiBase": string;
     }
 }
-export interface WacAmbulanceWlEditorCustomEvent<T> extends CustomEvent<T> {
+export interface XdudakmAmbulanceWlEditorCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLWacAmbulanceWlEditorElement;
+    target: HTMLXdudakmAmbulanceWlEditorElement;
 }
-export interface WacAmbulanceWlListCustomEvent<T> extends CustomEvent<T> {
+export interface XdudakmAmbulanceWlListCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLWacAmbulanceWlListElement;
+    target: HTMLXdudakmAmbulanceWlListElement;
 }
 declare global {
-    interface HTMLWacAmbulanceWlAppElement extends Components.WacAmbulanceWlApp, HTMLStencilElement {
+    interface HTMLXdudakmAmbulanceWlAppElement extends Components.XdudakmAmbulanceWlApp, HTMLStencilElement {
     }
-    var HTMLWacAmbulanceWlAppElement: {
-        prototype: HTMLWacAmbulanceWlAppElement;
-        new (): HTMLWacAmbulanceWlAppElement;
+    var HTMLXdudakmAmbulanceWlAppElement: {
+        prototype: HTMLXdudakmAmbulanceWlAppElement;
+        new (): HTMLXdudakmAmbulanceWlAppElement;
     };
-    interface HTMLWacAmbulanceWlEditorElementEventMap {
+    interface HTMLXdudakmAmbulanceWlEditorElementEventMap {
         "editor-closed": string;
     }
-    interface HTMLWacAmbulanceWlEditorElement extends Components.WacAmbulanceWlEditor, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLWacAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLWacAmbulanceWlEditorElement, ev: WacAmbulanceWlEditorCustomEvent<HTMLWacAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+    interface HTMLXdudakmAmbulanceWlEditorElement extends Components.XdudakmAmbulanceWlEditor, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLXdudakmAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLXdudakmAmbulanceWlEditorElement, ev: XdudakmAmbulanceWlEditorCustomEvent<HTMLXdudakmAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLWacAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLWacAmbulanceWlEditorElement, ev: WacAmbulanceWlEditorCustomEvent<HTMLWacAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLXdudakmAmbulanceWlEditorElementEventMap>(type: K, listener: (this: HTMLXdudakmAmbulanceWlEditorElement, ev: XdudakmAmbulanceWlEditorCustomEvent<HTMLXdudakmAmbulanceWlEditorElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
-    var HTMLWacAmbulanceWlEditorElement: {
-        prototype: HTMLWacAmbulanceWlEditorElement;
-        new (): HTMLWacAmbulanceWlEditorElement;
+    var HTMLXdudakmAmbulanceWlEditorElement: {
+        prototype: HTMLXdudakmAmbulanceWlEditorElement;
+        new (): HTMLXdudakmAmbulanceWlEditorElement;
     };
-    interface HTMLWacAmbulanceWlListElementEventMap {
+    interface HTMLXdudakmAmbulanceWlListElementEventMap {
         "entry-clicked": string;
     }
-    interface HTMLWacAmbulanceWlListElement extends Components.WacAmbulanceWlList, HTMLStencilElement {
-        addEventListener<K extends keyof HTMLWacAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLWacAmbulanceWlListElement, ev: WacAmbulanceWlListCustomEvent<HTMLWacAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+    interface HTMLXdudakmAmbulanceWlListElement extends Components.XdudakmAmbulanceWlList, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLXdudakmAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLXdudakmAmbulanceWlListElement, ev: XdudakmAmbulanceWlListCustomEvent<HTMLXdudakmAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
         addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-        removeEventListener<K extends keyof HTMLWacAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLWacAmbulanceWlListElement, ev: WacAmbulanceWlListCustomEvent<HTMLWacAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLXdudakmAmbulanceWlListElementEventMap>(type: K, listener: (this: HTMLXdudakmAmbulanceWlListElement, ev: XdudakmAmbulanceWlListCustomEvent<HTMLXdudakmAmbulanceWlListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
         removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
-    var HTMLWacAmbulanceWlListElement: {
-        prototype: HTMLWacAmbulanceWlListElement;
-        new (): HTMLWacAmbulanceWlListElement;
+    var HTMLXdudakmAmbulanceWlListElement: {
+        prototype: HTMLXdudakmAmbulanceWlListElement;
+        new (): HTMLXdudakmAmbulanceWlListElement;
     };
     interface HTMLElementTagNameMap {
-        "wac-ambulance-wl-app": HTMLWacAmbulanceWlAppElement;
-        "wac-ambulance-wl-editor": HTMLWacAmbulanceWlEditorElement;
-        "wac-ambulance-wl-list": HTMLWacAmbulanceWlListElement;
+        "xdudakm-ambulance-wl-app": HTMLXdudakmAmbulanceWlAppElement;
+        "xdudakm-ambulance-wl-editor": HTMLXdudakmAmbulanceWlEditorElement;
+        "xdudakm-ambulance-wl-list": HTMLXdudakmAmbulanceWlListElement;
     }
 }
 declare namespace LocalJSX {
-    interface WacAmbulanceWlApp {
+    interface XdudakmAmbulanceWlApp {
         "ambulanceId"?: string;
         "apiBase"?: string;
         "basePath"?: string;
     }
-    interface WacAmbulanceWlEditor {
+    interface XdudakmAmbulanceWlEditor {
         "ambulanceId"?: string;
         "apiBase"?: string;
         "entryId"?: string;
-        "onEditor-closed"?: (event: WacAmbulanceWlEditorCustomEvent<string>) => void;
+        "onEditor-closed"?: (event: XdudakmAmbulanceWlEditorCustomEvent<string>) => void;
     }
-    interface WacAmbulanceWlList {
+    interface XdudakmAmbulanceWlList {
         "ambulanceId"?: string;
         "apiBase"?: string;
-        "onEntry-clicked"?: (event: WacAmbulanceWlListCustomEvent<string>) => void;
+        "onEntry-clicked"?: (event: XdudakmAmbulanceWlListCustomEvent<string>) => void;
     }
     interface IntrinsicElements {
-        "wac-ambulance-wl-app": WacAmbulanceWlApp;
-        "wac-ambulance-wl-editor": WacAmbulanceWlEditor;
-        "wac-ambulance-wl-list": WacAmbulanceWlList;
+        "xdudakm-ambulance-wl-app": XdudakmAmbulanceWlApp;
+        "xdudakm-ambulance-wl-editor": XdudakmAmbulanceWlEditor;
+        "xdudakm-ambulance-wl-list": XdudakmAmbulanceWlList;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "wac-ambulance-wl-app": LocalJSX.WacAmbulanceWlApp & JSXBase.HTMLAttributes<HTMLWacAmbulanceWlAppElement>;
-            "wac-ambulance-wl-editor": LocalJSX.WacAmbulanceWlEditor & JSXBase.HTMLAttributes<HTMLWacAmbulanceWlEditorElement>;
-            "wac-ambulance-wl-list": LocalJSX.WacAmbulanceWlList & JSXBase.HTMLAttributes<HTMLWacAmbulanceWlListElement>;
+            "xdudakm-ambulance-wl-app": LocalJSX.XdudakmAmbulanceWlApp & JSXBase.HTMLAttributes<HTMLXdudakmAmbulanceWlAppElement>;
+            "xdudakm-ambulance-wl-editor": LocalJSX.XdudakmAmbulanceWlEditor & JSXBase.HTMLAttributes<HTMLXdudakmAmbulanceWlEditorElement>;
+            "xdudakm-ambulance-wl-list": LocalJSX.XdudakmAmbulanceWlList & JSXBase.HTMLAttributes<HTMLXdudakmAmbulanceWlListElement>;
         }
     }
 }

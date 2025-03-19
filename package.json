@@ -1,5 +1,5 @@
 {
-  "name": "wac-project",
+  "name": "xdudakm-project",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -7,11 +7,11 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/wac-project/wac-project.esm.js",
+  "unpkg": "dist/xdudakm-project/xdudakm-project.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/wac-project/wac-project.esm.js",
-      "require": "./dist/wac-project/wac-project.cjs.js"
+      "import": "./dist/xdudakm-project/xdudakm-project.esm.js",
+      "require": "./dist/xdudakm-project/xdudakm-project.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",

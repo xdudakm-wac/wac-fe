@@ -7,11 +7,11 @@ declare global {
 }
 
 @Component({
-  tag: 'wac-ambulance-wl-app',
-  styleUrl: 'wac-ambulance-wl-app.css',
+  tag: 'xdudakm-ambulance-wl-app',
+  styleUrl: 'xdudakm-ambulance-wl-app.css',
   shadow: true,
 })
-export class WacAmbulanceWlApp {
+export class XdudakmAmbulanceWlApp {
   @State() private relativePath = '';
 
   @Prop() basePath: string = '';
@@ -57,13 +57,13 @@ export class WacAmbulanceWlApp {
     return (
       <Host>
         {element === 'editor'
-          ? <wac-ambulance-wl-editor entry-id={entryId}
+          ? <xdudakm-ambulance-wl-editor entry-id={entryId}
                                      ambulance-id={this.ambulanceId} api-base={this.apiBase}
                                      oneditor-closed={() => navigate('./list')}
-          ></wac-ambulance-wl-editor>
-          : <wac-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}
+          ></xdudakm-ambulance-wl-editor>
+          : <xdudakm-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}
                                    onentry-clicked={(ev: CustomEvent<string>) => navigate('./entry/' + ev.detail)}>
-          </wac-ambulance-wl-list>
+          </xdudakm-ambulance-wl-list>
         }
       </Host>
     );

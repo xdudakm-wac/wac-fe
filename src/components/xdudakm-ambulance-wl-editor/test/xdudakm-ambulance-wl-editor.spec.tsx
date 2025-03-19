@@ -1,9 +1,9 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { WacAmbulanceWlEditor } from '../wac-ambulance-wl-editor';
+import { XdudakmAmbulanceWlEditor } from '../xdudakm-ambulance-wl-editor';
 import fetchMock from 'jest-fetch-mock';
 import { Condition, WaitingListEntry } from '../../../api/ambulance-wl';
 
-describe('wac-ambulance-wl-editor', () => {
+describe('xdudakm-ambulance-wl-editor', () => {
   const sampleEntry: WaitingListEntry = {
     id: 'entry-1',
     patientId: 'p-1',
@@ -51,8 +51,8 @@ describe('wac-ambulance-wl-editor', () => {
     );
 
     const page = await newSpecPage({
-      components: [WacAmbulanceWlEditor],
-      html: `<wac-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></wac-ambulance-wl-editor>`,
+      components: [XdudakmAmbulanceWlEditor],
+      html: `<xdudakm-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></xdudakm-ambulance-wl-editor>`,
     });
 
     await delay(300);
@@ -70,8 +70,8 @@ describe('wac-ambulance-wl-editor', () => {
     );
 
     const page = await newSpecPage({
-      components: [WacAmbulanceWlEditor],
-      html: `<wac-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></wac-ambulance-wl-editor>`,
+      components: [XdudakmAmbulanceWlEditor],
+      html: `<xdudakm-ambulance-wl-editor entry-id="test-entry" ambulance-id="test-ambulance" api-base="http://sample.test/api"></xdudakm-ambulance-wl-editor>`,
     });
 
     await delay(300);
