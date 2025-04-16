@@ -121,34 +121,6 @@ paths:
                   $ref: "#/components/examples/WaitingListEntryExample"
         "404":
           description: Ambulance or Entry with such ID does not exists
-  "/waiting-list/{ambulanceId}/condition":
-    get:
-      tags:
-        - ambulanceConditions
-      summary: Provides the list of conditions associated with ambulance
-      operationId: getConditions
-      description: By using ambulanceId you get list of predefined conditions
-      parameters:
-        - in: path
-          name: ambulanceId
-          description: pass the id of the particular ambulance
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: value of the predefined conditions
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Condition"
-              examples:
-                response:
-                  $ref: "#/components/examples/ConditionsListExample"
-        "404":
-          description: Ambulance with such ID does not exists
     put:
       tags:
         - ambulanceWaitingList
@@ -220,6 +192,34 @@ paths:
           description: Item deleted
         "404":
           description: Ambulance or Entry with such ID does not exists
+  "/waiting-list/{ambulanceId}/condition":
+    get:
+      tags:
+        - ambulanceConditions
+      summary: Provides the list of conditions associated with ambulance
+      operationId: getConditions
+      description: By using ambulanceId you get list of predefined conditions
+      parameters:
+        - in: path
+          name: ambulanceId
+          description: pass the id of the particular ambulance
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: value of the predefined conditions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Condition"
+              examples:
+                response:
+                  $ref: "#/components/examples/ConditionsListExample"
+        "404":
+          description: Ambulance with such ID does not exists
 components:
   schemas:
     WaitingListEntry:

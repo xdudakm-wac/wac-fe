@@ -203,7 +203,7 @@ export class AmbulanceWaitingListApi extends runtime.BaseAPI implements Ambulanc
         const headerParameters: runtime.HTTPHeaders = {};
 
         const response = await this.request({
-            path: `/waiting-list/{ambulanceId}/condition`.replace(`{${"ambulanceId"}}`, encodeURIComponent(String(requestParameters.ambulanceId))).replace(`{${"entryId"}}`, encodeURIComponent(String(requestParameters.entryId))),
+            path: `/waiting-list/{ambulanceId}/entries/{entryId}`.replace(`{${"ambulanceId"}}`, encodeURIComponent(String(requestParameters.ambulanceId))).replace(`{${"entryId"}}`, encodeURIComponent(String(requestParameters.entryId))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -312,7 +312,7 @@ export class AmbulanceWaitingListApi extends runtime.BaseAPI implements Ambulanc
         headerParameters['Content-Type'] = 'application/json';
 
         const response = await this.request({
-            path: `/waiting-list/{ambulanceId}/condition`.replace(`{${"ambulanceId"}}`, encodeURIComponent(String(requestParameters.ambulanceId))).replace(`{${"entryId"}}`, encodeURIComponent(String(requestParameters.entryId))),
+            path: `/waiting-list/{ambulanceId}/entries/{entryId}`.replace(`{${"ambulanceId"}}`, encodeURIComponent(String(requestParameters.ambulanceId))).replace(`{${"entryId"}}`, encodeURIComponent(String(requestParameters.entryId))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,

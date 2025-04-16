@@ -19,8 +19,8 @@ import type {
 } from '../models';
 import {
     ConditionFromJSON,
-// @ts-ignore
-    ConditionToJSON,
+  // @ts-ignore
+  ConditionToJSON,
 } from '../models';
 
 export interface GetConditionsRequest {
